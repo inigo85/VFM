@@ -15,8 +15,27 @@
 
 		</p:layoutUnit>
 
-		<p:layoutUnit position="south" size="100" header="Bottom"
+		<p:layoutUnit position="south" size="200" header="Bottom"
 			resizable="false" closable="false" collapsible="true">
+			<h:form>
+				<p:dataTable var="car" value="#{tableBean.carsSmall}">
+					<p:column headerText="Col1">
+
+					</p:column>
+
+					<p:column headerText="Col2">
+
+					</p:column>
+
+					<p:column headerText="Col3">
+
+					</p:column>
+
+					<p:column headerText="Col4">
+
+					</p:column>
+				</p:dataTable>
+			</h:form>
 
 		</p:layoutUnit>
 
@@ -28,17 +47,11 @@
 
 		<p:layoutUnit position="center">
 			<h:form>
-				<h:panelGrid columns="2">
+				<p:panel>
 					<p:lineChart value="#{chartBean.linearModel}" legendPosition="e"
 						zoom="true" animate="true" title="Linear Chart" minY="0" maxY="10"
-						style="width:400px;" />
-
-					<p:barChart id="basic" value="#{chartBean.categoryModel}"
-						legendPosition="ne" title="Basic Bar Chart" min="0" max="200"
-						style="width:400px" animate="true" />
-				</h:panelGrid>
-
-
+						style="height:300px" />
+				</p:panel>
 			</h:form>
 		</p:layoutUnit>
 
